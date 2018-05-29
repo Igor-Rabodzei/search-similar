@@ -6,7 +6,7 @@ Install:
 git clone git@github.com:Igor-Rabodzei/search-similar.git
 
 # navigate to project dir
-cd search-simila
+cd search-similar
 
 # install npm dependences:
 npm i

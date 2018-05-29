@@ -47,7 +47,6 @@ const getParameters = (apiVersion, endpointId) => {
       const {
         data
       } = await request(parametersUrl);
-      // console.log(endpointId);
       return resolve(data);
     } catch (e) {
       reject(e);
@@ -59,28 +58,25 @@ const getParameters = (apiVersion, endpointId) => {
 const run = async () => {
   const apiVersion = await getApiVersionId();
   const endpointsId = await getEndpointsId(apiVersion);
-  // console.log("start--------->", endpointsId);
   const promiseArr = endpointsId.map(item => getParameters(apiVersion, item));
   const result = [];
   await Promise.all(promiseArr).then((values) => {
-    // console.log(values);
     values.forEach((item) => {
-      // console.log(item);
       result.push(item.data);
     });
   });
 
   const SortByDate = result.map(arr => arr.sort((a, b) => a.createdAt - b.createdAt));
+
   // var unique = result.filter(function (set) {
   //   return function (f) {
   //     return !set.has(f.name) && set.add(f.name);
   //   };
   // }(new Set()));
   // similar to in down
-
   const getUnique = SortByDate.map(arr => arr.filter((set => f => !set.has(f.name) && set.add(f.name))(new Set())));
-
-  console.log(getUnique[0]);
+  console.log(getUnique);
+  return getUnique;
 };
 
 run();

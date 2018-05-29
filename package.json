@@ -1,0 +1,22 @@
+{
+  "name": "search-similar",
+  "version": "1.0.0",
+  "description": "search similar ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Igor Rabodzey",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-react": "^7.8.2"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "no-loops"
+  ],
+  "env":{
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false,
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "no-underscore-dangle": 0,
+    "indent": [2, 2],
+    "func-names": [ 2, "never" ],
+    "no-shadow": [ 2, { "allow": ["error", "err", "response", "state"] } ],
+    "quotes": [ 2, "double" ],
+    "no-case-declarations": 0,
+    "no-plusplus": [ 2, { "allowForLoopAfterthoughts": true } ],
+    //"max-len": [ 1, 100, 2, { "ignoreComments": true } ],
+    "max-len": [ 0, 100, 2, { "ignoreComments": true } ],
+    "no-param-reassign": 0,
+    //"no-param-reassign": 1,
+    "comma-dangle": 0,
+    "radix": 2,
+    "no-loops/no-loops": 0,
+    //"no-loops/no-loops": 1,
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "consistent-return": [2, { "treatUndefinedAsUnspecified": true }],
+    "jsx-a11y/href-no-hash": [ 2, {"specialLink": [ "hrefLeft", "hrefRight" ]}],
+
+    "react/jsx-filename-extension": 0,
+    //"react/forbid-prop-types": 1,
+    "react/forbid-prop-types": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": [2, {"devDependencies": true}],
+    "import/extensions": 0,
+    "no-multi-spaces": ["error", { "exceptions": { "ImportDeclaration": true, "VariableDeclarator": true } }],
+    "react/prefer-stateless-function": 0
+  }
+}
